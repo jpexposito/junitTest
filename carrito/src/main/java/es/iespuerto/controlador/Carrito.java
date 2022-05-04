@@ -12,6 +12,12 @@ public class Carrito {
 
     private Map<Producto, Integer> productosComprados = new TreeMap<>();
 
+    
+
+    public Map<Producto, Integer> getProductosComprados() {
+        return productosComprados;
+    }
+
     /**
      * Funcion que permite incluir un elemento en el carrito de
      * @param producto Producto que se desea incluir
@@ -19,7 +25,8 @@ public class Carrito {
      */
     public void add(Producto producto, int cantidad) {
         if (productosComprados.containsKey(producto)) {
-            productosComprados.put(producto, productosComprados.get(producto) + cantidad);
+            productosComprados.put(producto,
+                    productosComprados.get(producto) + cantidad);
         } else {
             productosComprados.put(producto, cantidad);
         }
@@ -40,6 +47,7 @@ public class Carrito {
     /**
      * Funcion que permite imprimir el carrito de la compra
      */
+    /** 
     public void imprimirTicket() {
         System.out.println("-------- ----------------------------------- -------- --------------- --------");
         System.out.printf("%-8s %-35s %-8s %-14s %-8s%n", "Producto", "Descripción", "Cantidad", "Precio Unitario",
@@ -54,4 +62,21 @@ public class Carrito {
         System.out.printf("%69s %8.2f%n", "Total Carro:", totalCarrito());
         System.out.println("-------- ----------------------------------- -------- --------------- --------");
     }
+*/
+    
+    public String imprimirTicket() {
+        String resultado = "";
+        resultado = "\n-------- ----------------------------------- -------- --------------- --------";
+        resultado += "\n Producto  Descripción Cantidad Precio Unitario Subtotal";
+        resultado += "\n -------- ----------------------------------- -------- --------------- --------";
+        for (Producto p : productosComprados.keySet()) {
+            resultado += "\n " + p.getCodigo()+ " "+ p.getDescripcion()+ " "+ productosComprados.get(p)+ " "+ p.getPrecioVenta()
+                    + " "+ productosComprados.get(p) * p.getPrecioVenta() + "\n";
+        }
+        resultado += "\n -------- ----------------------------------- -------- --------------- --------";
+        resultado += "\n Total Carro:" + totalCarrito();
+        resultado += "\n -------- ----------------------------------- -------- --------------- --------";
+        return resultado;
+    }
+     
 }

@@ -97,6 +97,7 @@ public class Tienda {
         Tienda compra = new Tienda();
         compra.leerProductos(compra.obtenerPathFichero("productos.txt"));
         compra.leerCarrito(compra.obtenerPathFichero("compra.txt"));
-        compra.carro.imprimirTicket();
+        System.out.println(compra.carro.imprimirTicket());
+        
     }
 }
