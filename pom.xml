@@ -163,7 +163,7 @@
 
     <modules>
         <module>carrito</module>
-        <module>mokito</module>
+        <module>mockito</module>
     </modules>
 
 </project>
