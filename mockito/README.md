@@ -1,6 +1,6 @@
 <div align="justify">
 
-# JUNIT - MOKITO
+# JUNIT - MOCKITO
 
 <div align="center">
   <img src="https://javadesde0.com/wp-content/uploads/Mockito.jpg" width="400px" />
