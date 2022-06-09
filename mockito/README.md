@@ -50,6 +50,25 @@ Un mock, realmente, es un simulacro, un suplente para un módulo real. No contie
   <img src="https://javadesde0.com/wp-content/uploads/1_fCMBDvJQWR6KokIF-H7iwQ.png" width="400px" />
 </div>
 
+### Incluir dependencias
+
+```xml
+<mokito-version>2.21.0</mokito-version>
+
+<dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mokito-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mokito-version}</version>
+            <scope>test</scope>
+        </dependency>
+```
 
 ## Enlaces
 
